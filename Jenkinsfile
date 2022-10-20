@@ -8,7 +8,7 @@ pipeline {
         }
         stage('builddockerimage') {
             steps {
-              sh "docker --version"
+              sh "mvn install"
               sh "docker build -t nginxapp:1 ." 
              
             }
